@@ -76,6 +76,7 @@ namespace gamepad {
      */
     //% block="%dir"
     //% blockId=gamepad_hatdir
+    //% weight=60
     export function hatDirection(dir: HatDirection): HatDirection {
         return dir
     }
