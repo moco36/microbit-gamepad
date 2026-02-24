@@ -67,6 +67,15 @@ namespace gamepad {
         }
     }
 
+    /**
+     * 十字キーの方向を選ぶ
+     */
+    //% block="%dir"
+    //% blockId=gamepad_hatdir
+    export function hatDirection(dir: HatDirection): HatDirection {
+        return dir
+    }
+
     export enum Axis {
         //% block="左スティックX"
         LX = 0,
