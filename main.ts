@@ -81,6 +81,16 @@ namespace gamepad {
         return getHat() === dir
     }
 
+    /**
+     * デバッグ用：十字キーの生の値を返す
+     */
+    //% block="十字キーの生の値"
+    //% weight=50
+    export function getHatRaw(): number {
+        if (!_buf) return -1
+        return _buf.getNumber(NumberFormat.UInt8LE, 4)
+    }
+
     export enum Axis {
         //% block="左スティックX"
         LX = 0,
