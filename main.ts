@@ -25,7 +25,7 @@ namespace gamepad {
 
     /**
      * ボタンが押されているか確認する
-     * @param btn ボタン番号 (1〜13)
+     * @param btn ボタン番号 (1〜13), eg: 1
      */
     //% block="ボタン %btn が押されている"
     //% btn.min=1 btn.max=13
