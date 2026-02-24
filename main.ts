@@ -51,43 +51,24 @@ namespace gamepad {
     }
 
     /**
-     * 十字キーの方向を取得する
-     */
-    //% block="十字キーの方向"
-    //% weight=70
-    export function getHat(): HatDirection {
-        if (!_buf) return HatDirection.Neutral
-        const hat = _buf.getNumber(NumberFormat.UInt8LE, 4)
-        switch (hat) {
-            case 0x00: return HatDirection.Up
-            case 0x01: return HatDirection.UpRight
-            case 0x02: return HatDirection.Right
-            case 0x03: return HatDirection.DownRight
-            case 0x04: return HatDirection.Down
-            case 0x05: return HatDirection.DownLeft
-            case 0x06: return HatDirection.Left
-            case 0x07: return HatDirection.UpLeft
-            default:   return HatDirection.Neutral
-        }
-    }
-
-    /**
      * 十字キーが指定した方向に入力されているか確認する
-     * @param dir 方向
      */
     //% block="十字キーが %dir に入力されている"
-    //% weight=65
+    //% weight=70
     export function isHatPressed(dir: HatDirection): boolean {
-        return getHat() === dir
+        if (!_buf) return false
+        const hat = _buf.getNumber(NumberFormat.UInt8LE, 4)
+        if (dir === HatDirection.Neutral) return hat > 7
+        return hat === (dir as number)
     }
 
     /**
-     * 十字キーの生の値を返す
+     * 十字キーの生の値を取得する（0〜7=方向、15=中立）
      */
     //% block="十字キーの生の値"
-    //% weight=50
+    //% weight=60
     export function getHatRaw(): number {
-        if (!_buf) return -1
+        if (!_buf) return 15
         return _buf.getNumber(NumberFormat.UInt8LE, 4)
     }
 
