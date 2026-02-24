@@ -1,7 +1,7 @@
 {
     "name": "microbit-gamepad",
     "description": "Gamepad controller blocks for micro:bit",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "license": "MIT",
     "dependencies": {
         "core": "*"
