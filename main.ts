@@ -1,4 +1,4 @@
-//% color="#AA278D" icon="\uf11b" block="Gamepad"
+//% color="#AA278D" icon="\uf11b"
 namespace gamepad {
 
     let _buf: Buffer = null
