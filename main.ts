@@ -60,9 +60,13 @@ namespace gamepad {
         const hat = _buf.getNumber(NumberFormat.UInt8LE, 4)
         switch (hat) {
             case 0x00: return HatDirection.Up
+            case 0x01: return HatDirection.UpRight
             case 0x02: return HatDirection.Right
+            case 0x03: return HatDirection.DownRight
             case 0x04: return HatDirection.Down
+            case 0x05: return HatDirection.DownLeft
             case 0x06: return HatDirection.Left
+            case 0x07: return HatDirection.UpLeft
             default:   return HatDirection.Neutral
         }
     }
@@ -90,12 +94,20 @@ namespace gamepad {
     export enum HatDirection {
         //% block="上"
         Up,
+        //% block="右上"
+        UpRight,
         //% block="右"
         Right,
+        //% block="右下"
+        DownRight,
         //% block="下"
         Down,
+        //% block="左下"
+        DownLeft,
         //% block="左"
         Left,
+        //% block="左上"
+        UpLeft,
         //% block="中立"
         Neutral
     }
