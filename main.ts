@@ -72,13 +72,13 @@ namespace gamepad {
     }
 
     /**
-     * 十字キーの方向を選ぶ
+     * 十字キーが指定した方向に入力されているか確認する
+     * @param dir 方向
      */
-    //% block="%dir"
-    //% blockId=gamepad_hatdir
-    //% weight=60
-    export function hatDirection(dir: HatDirection): HatDirection {
-        return dir
+    //% block="十字キーが %dir に入力されている"
+    //% weight=65
+    export function isHatPressed(dir: HatDirection): boolean {
+        return getHat() === dir
     }
 
     export enum Axis {
