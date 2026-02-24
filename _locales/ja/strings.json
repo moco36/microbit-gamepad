@@ -1,0 +1,22 @@
+{
+    "gamepad|block": "ゲームパッド",
+    "gamepad.setAddress|block": "ゲームパッドのI2Cアドレスを %addr に設定する",
+    "gamepad.update|block": "ゲームパッドを読み込む",
+    "gamepad.isButtonPressed|block": "ボタン %btn が押されている",
+    "gamepad.getAxis|block": "スティック %axis の値",
+    "gamepad.isHatPressed|block": "十字キーが %dir に入力されている",
+    "gamepad.getHatRaw|block": "十字キーの生の値",
+    "gamepad.Axis.LX|block": "左スティックX",
+    "gamepad.Axis.LY|block": "左スティックY",
+    "gamepad.Axis.RX|block": "右スティックX",
+    "gamepad.Axis.RY|block": "右スティックY",
+    "gamepad.HatDirection.Up|block": "上",
+    "gamepad.HatDirection.UpRight|block": "右上",
+    "gamepad.HatDirection.Right|block": "右",
+    "gamepad.HatDirection.DownRight|block": "右下",
+    "gamepad.HatDirection.Down|block": "下",
+    "gamepad.HatDirection.DownLeft|block": "左下",
+    "gamepad.HatDirection.Left|block": "左",
+    "gamepad.HatDirection.UpLeft|block": "左上",
+    "gamepad.HatDirection.Neutral|block": "中立"
+}
