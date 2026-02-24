@@ -1,14 +1,14 @@
 {
     "name": "microbit-gamepad",
     "description": "Gamepad controller blocks for micro:bit",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "license": "MIT",
     "dependencies": {
         "core": "*"
     },
     "files": [
         "main.ts",
-        "_locales/ja.json"
+        "_locales/ja/strings.json"
     ],
     "supportedTargets": ["microbit"]
 }
